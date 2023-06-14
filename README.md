@@ -16,10 +16,10 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
 3. License for Mosek optimization tool:
     * Obtain license file `mosek.lic` (`https://www.mosek.com/products/academic-licenses/`). The license is free for academic use.
     * Place the file in `$HOME/mosek/` (i.e, the `mosek/` folder that now exists in your home directory).
-    * If you are not able to place the license in the default location, you can set a custom location by exporting the bash variable `MOSEKLM_LICENSE_FILE=/custom/path/`.
-  ```bash
-  export MOSEKLM_LICENSE_FILE="/path/to/mosek.lic"
-  ```
+    * If you are not able to place the license in the default location, you can set a custom location by exporting the bash variable   `MOSEKLM_LICENSE_FILE=/custom/path/`.
+     ```bash
+     export MOSEKLM_LICENSE_FILE="/path/to/mosek.lic"
+     ```
 4. Download AA data repositories and set environment variable AA_DATA_REPO:
    -  ```bash
       cd $AA_DATA_REPO
