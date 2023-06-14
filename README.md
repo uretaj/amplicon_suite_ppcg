@@ -1,6 +1,6 @@
 # amplicon_suite_ppcg
 
-The original code and instructions are from https://github.com/AmpliconSuite/AmpliconSuite-pipeline . It has been modified to generate the seed intervals from Battenberg calls which are then passed to Amplicon Architect.
+The original code and instructions are from https://github.com/AmpliconSuite/AmpliconSuite-pipeline . It has been modified to generate the seed intervals from the Battenberg calls which are then passed to Amplicon Architect.
 
 ## Installation
 1. Obtain the AmpliconSuite-pipeline image:
