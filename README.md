@@ -11,7 +11,6 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
 2. Obtain the execution script and configure the data repo location
     ```bash
     git clone https://github.com/uretaj/AmpliconSuite-pipeline.git
-    cd amplicon_suite_ppcg
     ```
 3. License for Mosek optimization tool:
     * Obtain license file `mosek.lic` (`https://www.mosek.com/products/academic-licenses/`). The license is free for academic use.
