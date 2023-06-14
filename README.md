@@ -1,6 +1,6 @@
 # amplicon_suite_ppcg
 
-The original code and instructions are from https://github.com/AmpliconSuite/AmpliconSuite-pipeline
+The original code and instructions are from https://github.com/AmpliconSuite/AmpliconSuite-pipeline . It has been modified to generate seed intervals for Battenberg calls.
 
 ## Installation
 1. Obtain the AmpliconSuite-pipeline image:
@@ -44,7 +44,7 @@ The complete list of arguments for AmpliconSuite is available [here](https://git
 Input files:
 
   * `--bam | --sorted_bam {sample.cs.bam}` Coordinate-sorted bam
-  * `--scna_file {scna.txt}` Supply the SCNA calls from Battenberg
+  * `--scna_file {scna.txt}` Supply the SCNA calls from Battenberg to generate the seed intervals to be passed to Amplicon Architect
   
 #### Optional
 
