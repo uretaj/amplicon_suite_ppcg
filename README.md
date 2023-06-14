@@ -26,7 +26,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
       tar zxf GRCh37.tar.gz
       rm GRCh37.tar.gz
       ```
-   - If you do not do this process the container runscript will attempt to download the files itself before launching the container.
+   - If you do not do this process the container runscript will attempt to download the files before launching the container.
 
 An example command might look like:
 
