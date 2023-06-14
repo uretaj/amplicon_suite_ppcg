@@ -28,6 +28,9 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
       ```
    - If you do not do this process the container runscript will attempt to download the files before launching the container.
 
+   ```bash
+     AA_DATA_REPO="/path/to/data_repo"
+   ```
 An example command might look like:
 
 `amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file  --ref "GRCh37" --downsample -1 --sif /path/to/singularity_image --AA_insert_sdevs 3.0  --run_AA --run_AC`
