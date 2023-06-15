@@ -74,7 +74,7 @@ parser.add_argument("--AA_extendmode", help="If --run_AA selected, set the --ext
                     "mode is 'EXPLORE'", choices=["EXPLORE", "CLUSTERED", "UNCLUSTERED", "VIRAL"], default='EXPLORE')
 parser.add_argument("--AA_insert_sdevs", help="Number of standard deviations around the insert size. May need to "
                     "increase for sequencing runs with high variance after insert size selection step. (default "
-                    "3.0)", type=float, default=None)
+                    "3.0)", type=float, default=3.0)
 parser.add_argument(
     "--normal_bam", help="Path to matched normal bam for CNVKit (optional)", default=None)
 parser.add_argument("--ploidy", type=int,
@@ -126,12 +126,18 @@ if args.sif and not args.sif.endswith("ampliconsuite-pipeline.sif"):
 else:
     args.sif = "ampliconsuite-pipeline.sif"
 
+#start of modification uretaj 
+args.ref = "GRCh37"
+
+"""    
 if args.ref == "hg38": args.ref = "GRCh38"
 if args.ref == "GRCm38": args.ref = "mm10"
 if (args.fastqs or args.completed_AA_runs) and not args.ref:
     sys.stderr.write(
         "Must specify --ref when providing unaligned fastq files.")
     sys.exit(1)
+"""
+#end of modification uretaj 
 
 if not args.output_directory:
     args.output_directory = os.getcwd()
@@ -226,16 +232,23 @@ if args.scna_file:
             tsv_writer.writerow(row)
 
 
-#end of modification uretaj    
+
 
 # assemble an argstring
+argstring = "-t " + str(args.nthreads) + " --cngain " + str(args.cngain) + " --cnsize_min " + \
+    str(args.cnsize_min) + " --downsample -1" + " -s " + args.sample_name + \
+    " --AA_extendmode " + args.AA_extendmode + " --AA_runmode " + args.AA_runmode + \
+    " --AA_insert_sdevs 3.0"  
+"""    
 argstring = "-t " + str(args.nthreads) + " --cngain " + str(args.cngain) + " --cnsize_min " + \
     str(args.cnsize_min) + " --downsample " + str(args.downsample) + " -s " + args.sample_name + \
     " --AA_extendmode " + args.AA_extendmode + " --AA_runmode " + args.AA_runmode + \
     " --AA_insert_sdevs " + str(args.AA_insert_sdevs)
+"""    
+#end of modification uretaj    
 
-if args.ref:
-    argstring += " --ref " + args.ref
+#if args.ref: #modification uretaj 
+argstring += " --ref " + args.ref 
 
 if args.sorted_bam:
     args.sorted_bam = os.path.realpath(args.sorted_bam)
@@ -285,19 +298,19 @@ if args.no_filter:
 if args.no_QC:
     argstring += " --no_QC"
 
-if args.AA_insert_sdevs:
-    argstring += " --AA_insert_sdevs " + str(args.AA_insert_sdevs)
+#if args.AA_insert_sdevs: 
+argstring += " --AA_insert_sdevs 3.0" # + str(args.AA_insert_sdevs)  #modification uretaj 
 
 # To use, would need to mount the directory of this file. Users should just modify as needed afterwards.
 # if args.sample_metadata:
 # 	args.sample_metadata = os.path.abspath(args.sample_metadata)
 # 	argstring += " --sample_metadata " + args.sample_metadata
 
-if args.run_AA:
-    argstring += " --run_AA"
+#if args.run_AA:   #modification uretaj  
+argstring += " --run_AA"
 
-if args.run_AC:
-    argstring += " --run_AC"
+#if args.run_AC:   #modification uretaj 
+argstring += " --run_AC"
 
 if args.metadata != "":
     metadata_helper(args.metadata)
@@ -317,7 +330,7 @@ with open(runscript_outname, 'w') as outfile:
     outfile.write("export argstring=\"" + argstring + "\"\n")
     outfile.write("export SAMPLE_NAME=" + args.sample_name + "\n")
 
-    # Download the reference genome if necessary
+    # Download the reference genome 
     no_data_repo = not AA_REPO or (args.ref and not os.path.exists(AA_REPO + args.ref))
     if no_data_repo and args.ref:
         outfile.write('echo DOWNLOADING {} NOW ....\n'.format(args.ref))
