@@ -25,7 +25,6 @@ An example command might look like:
 `amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --sif /path/to/singularity_image `
 
 ## Command line arguments to AmpliconSuite-pipeline
-The complete list of arguments for AmpliconSuite is available [here](https://github.com/AmpliconSuite/AmpliconSuite-pipeline/blob/master/README.md )
 #### Required
 - `-o | --output_directory {outdir}`: (Optional) Directory where results will be stored. Defaults to current directory.
 
