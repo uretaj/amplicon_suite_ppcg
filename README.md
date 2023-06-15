@@ -33,6 +33,7 @@ The complete list of arguments for AmpliconSuite is available [here](https://git
 
 - `-t | --nthreads {int}`: (Required) Number of threads to use for BWA and CNVkit. Recommend 12 or more threads to be used.
 - `--sif {str}`: Location of the ampliconsuite-pipeline.sif file. Only required if .sif file not in cache
+
 Input files:
 
   * `--bam | --sorted_bam {sample.cs.bam}` Coordinate-sorted bam
