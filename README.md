@@ -34,7 +34,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
       ```
 An example command might look like:
 
-`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --sif /path/to/singularity_image  --run_AA --run_AC`
+`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --sif /path/to/singularity_image `
 
 ## Command line arguments to AmpliconSuite-pipeline
 The complete list of arguments for AmpliconSuite is available [here](https://github.com/AmpliconSuite/AmpliconSuite-pipeline/blob/master/README.md )
@@ -44,20 +44,9 @@ The complete list of arguments for AmpliconSuite is available [here](https://git
 - `-s | --sample_name {sname}`: (Required) A name for the sample being run.
 
 - `-t | --nthreads {int}`: (Required) Number of threads to use for BWA and CNVkit. Recommend 12 or more threads to be used.
-
+- `--sif {str}`: Location of the ampliconsuite-pipeline.sif file. Only required if .sif file not in cache
 Input files:
 
   * `--bam | --sorted_bam {sample.cs.bam}` Coordinate-sorted bam
   * `--scna_file {scna.txt}` Supply the SCNA calls from Battenberg to generate the seed intervals to be passed to Amplicon Architect
-  
-#### Optional
 
-- `--run_AA`: Run AA at the end of the preparation pipeline.
-
-- `--run_AC`: Run AmpliconClassifier following AA. No effect if `--run_AA` not set.
-
-- `--downsample {float}`: Set a custom threshold for bam coverage downsampling during AA. Does not affect coverage in analyses outside of AA. Default: 10. Set to -1 for no downsampling.
-
-- `--AA_insert_sdevs {float}`: Default 3.0. Suggest raising to 8 or 9 if library has poorly-controlled insert size (low fraction of properly-paired reads). See AA documentation for more info.
-
-- `--sif {str}`: Location of the ampliconsuite-pipeline.sif file. Only required if .sif file not in cache
