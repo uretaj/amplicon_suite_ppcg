@@ -34,7 +34,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
       ```
 An example command might look like:
 
-`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file  --ref "GRCh37" --downsample -1 --sif /path/to/singularity_image --AA_insert_sdevs 3.0  --run_AA --run_AC`
+`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --sif /path/to/singularity_image  --run_AA --run_AC`
 
 ## Command line arguments to AmpliconSuite-pipeline
 The complete list of arguments for AmpliconSuite is available [here](https://github.com/AmpliconSuite/AmpliconSuite-pipeline/blob/master/README.md )
