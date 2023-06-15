@@ -31,7 +31,7 @@ An example command might look like:
 - `-s | --sample_name {sname}`: (Required) A name for the sample being run.
 
 - `-t | --nthreads {int}`: (Required) Number of threads to use for BWA and CNVkit. Recommend 12 or more threads to be used.
-- `--sif {str}`: Location of the ampliconsuite-pipeline.sif file. Only required if .sif file not in cache
+- `--sif {str}`: Location of the ampliconsuite-pipeline.sif file
 
 Input files:
 
