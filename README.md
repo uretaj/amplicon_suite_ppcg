@@ -8,7 +8,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
      * Singularity installation: https://docs.sylabs.io/guides/3.0/user-guide/installation.html
      * Must have Singularity version 3.6 or higher.
      * Pull the singularity image: `singularity pull library://jluebeck/ampliconsuite-pipeline/ampliconsuite-pipeline`
-2. Obtain the execution script and configure the data repo location
+2. Obtain the execution script
     ```bash
     git clone https://github.com/uretaj/amplicon_suite_ppcg.git
     ```
@@ -20,18 +20,6 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
         ```bash
         export MOSEKLM_LICENSE_FILE="/path/to/mosek.lic"
         ```
-4. Download AA data repositories and set environment variable AA_DATA_REPO:
-   -  ```bash
-      cd $AA_DATA_REPO
-      wget https://datasets.genepattern.org/data/module_support_files/AmpliconArchitect/GRCh37.tar.gz
-      tar zxf GRCh37.tar.gz
-      rm GRCh37.tar.gz
-      ```
-   - If you do not do this process the container runscript will attempt to download the files before launching the container.
-   - Set the environment variable
-      ```bash
-        AA_DATA_REPO="/path/to/data_repo"
-      ```
 An example command might look like:
 
 `amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --sif /path/to/singularity_image `
