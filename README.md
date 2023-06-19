@@ -28,7 +28,7 @@ An example command might look like:
 #### Required
 - `-o | --output_directory {outdir}`: (Optional) Directory where results will be stored. Defaults to current directory.
 
-- `-o | --data_repo `: (Optional) Directory where the required annotations for GRCh37 are stored. This creates the data_repo folder in the specified directory and downloads the necessary files if the data_repo folder does not exist and if the environment variable AA_DATA_REPO is not set.
+- `-o | --data_repo `:  Directory where the required annotations for GRCh37 are stored. This creates the data_repo folder in the specified directory and downloads the necessary files if the data_repo folder does not exist and if the environment variable AA_DATA_REPO is not set.
 
 - `-s | --sample_name {sname}`: (Required) A name for the sample being run.
 
