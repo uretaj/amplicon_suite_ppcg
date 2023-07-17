@@ -4,10 +4,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
 
 ## Installation
 1. Obtain the AmpliconSuite-pipeline image:
-   - **Singularity**:
-     * Singularity installation: https://docs.sylabs.io/guides/3.0/user-guide/installation.html
-     * Must have Singularity version 3.6 or higher.
-     * Pull the singularity image: `singularity pull library://jluebeck/ampliconsuite-pipeline/ampliconsuite-pipeline`
+     * Download the singularity image: [url for download]
 2. Obtain the execution script
     ```bash
     git clone https://github.com/uretaj/amplicon_suite_ppcg.git
