@@ -12,7 +12,13 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
     ```bash
     git clone https://github.com/uretaj/amplicon_suite_ppcg.git
     ```
-3. License for Mosek optimization tool:
+3. Download the data repo:
+```bash
+wget [url for download]
+tar zxf [reference_build].tar.gz
+rm [reference_build].tar.gz   
+```
+5. License for Mosek optimization tool:
     * Obtain license file `mosek.lic` (`https://www.mosek.com/products/academic-licenses/`). The license is free for academic use.
     * Place the file in `$HOME/mosek/` (i.e, the `mosek/` folder that now exists in your home directory).
     * If you are not able to place the license in the default location, you can set a custom location by exporting the bash variable   `MOSEKLM_LICENSE_FILE=/custom/path/`.
