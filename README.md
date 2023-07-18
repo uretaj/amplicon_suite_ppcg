@@ -45,7 +45,7 @@ Below is a sample Slurm file:
 module load singularity
 export MOSEKLM_LICENSE_FILE="/path/to/license"
 bam="/path/to/bam"
-amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/sample_name -t 4 --bam /path/to/bam/sample_name.bam --scna_file /path/to/scna/sample_name.txt --data_repo /data_repo
+amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/sample_name -t 4 --bam path/to/bam/sample_name.bam --scna_file path/to/scna/sample_name.txt --data_repo path/to/data_repo
 ```
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
