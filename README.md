@@ -4,7 +4,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
 
 ## Installation
 1. Obtain the data repository containing  the AmpliconSuite-pipeline image and GRCh37 annotations  :
-    * Download the data repo: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/data_repo.tar.gz.gpg
+    * Download the data repo: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/data_repo.tar.gz
     * Extract the tar file
          ```bash
          tar zxf data_repo.tar.gz
