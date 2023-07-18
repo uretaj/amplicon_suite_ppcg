@@ -22,15 +22,13 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
         ```
 An example command might look like:
 
-`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir -s name_of_run -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --data_repo path/to/data_repo `
+`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir  -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --data_repo path/to/data_repo `
 
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
 - `-o | --output_directory {outdir}`: (Optional) Directory where results will be stored. Defaults to current directory.
 
 - `--data_repo {repodir} `:  Directory where the singularity image file and  required annotations for GRCh37 are stored.
-
-- `-s | --sample_name {sname}`: (Required) A name for the sample being run.
 
 - `-t | --nthreads {int}`: (Required) Number of threads to use for BWA and CNVkit. Recommend 12 or more threads to be used.
 
