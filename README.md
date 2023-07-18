@@ -55,6 +55,6 @@ amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/sample_name -t 
 
 Input files:
 
-  * `--bam | --sorted_bam {sample.bam}` Coordinate-sorted bam
+  * `--bam {sample.bam}` Coordinate-sorted bam
   * `--scna_file {scna.txt}` Supply the Battenberg SCNA calls of the sample to generate the seed intervals to be passed to Amplicon Architect
 
