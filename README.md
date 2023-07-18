@@ -34,6 +34,6 @@ An example command might look like:
 
 Input files:
 
-  * `--bam | --sorted_bam {sample.cs.bam}` Coordinate-sorted bam
+  * `--bam | --sorted_bam {sample.bam}` Coordinate-sorted bam
   * `--scna_file {scna.txt}` Supply the SCNA calls from Battenberg to generate the seed intervals to be passed to Amplicon Architect
 
