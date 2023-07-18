@@ -23,7 +23,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
         ```
 An example command might look like:
 
-`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o path/to/output_dir/sample  -t 8 --bam sample.bam  --scna_file sample.txt --data_repo path/to/data_repo `
+`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o path/to/output_dir/sample --bam sample.bam  --scna_file sample.txt --data_repo path/to/data_repo `
 
 
 Below is a sample Slurm file:
@@ -45,15 +45,13 @@ Below is a sample Slurm file:
 module load singularity
 export MOSEKLM_LICENSE_FILE="/path/to/license"
 bam="/path/to/bam"
-amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/sample_name -t 4 --bam path/to/bam/sample_name.bam --scna_file path/to/scna/sample_name.txt --data_repo path/to/data_repo
+amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/sample_name --bam path/to/bam/sample_name.bam --scna_file path/to/scna/sample_name.txt --data_repo path/to/data_repo
 ```
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
 - `-o  {outdir}`: (Optional) Directory where results will be stored. Include the sample name to avoid conflicts.
 
 - `--data_repo {repodir} `:  Directory where the singularity image file and  required annotations for GRCh37 are stored.
-
-- `-t  {int}`: (Required) Number of threads to use for BWA and CNVkit. Recommend 12 or more threads to be used.
 
 Input files:
 
