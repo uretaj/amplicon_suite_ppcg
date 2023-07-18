@@ -26,7 +26,7 @@ An example command might look like:
 
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
-- `-o | --output_directory {outdir}`: (Optional) Directory where results will be stored. Defaults to current directory.
+- `-o | --output_directory {outdir}`: (Optional) Directory where results will be stored.
 
 - `--data_repo {repodir} `:  Directory where the singularity image file and  required annotations for GRCh37 are stored.
 
