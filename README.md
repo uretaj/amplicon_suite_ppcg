@@ -49,7 +49,7 @@ amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/sample_name -t 
 ```
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
-- `-o  {outdir}`: (Optional) Directory where results will be stored. Include the sample name to avoid conflicts.
+- `-o  {outdir}`: Directory where results will be stored. Include the sample name to avoid conflicts.
 - `-t  {int}`: (Required) Number of threads to use for BWA and CNVkit. Recommend 12 or more threads to be used.
 - `--data_repo {repodir} `:  Directory where the singularity image file and  required annotations for GRCh37 are stored.
 
