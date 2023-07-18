@@ -22,7 +22,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
         ```
 An example command might look like:
 
-`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir/sample_name  -t 8 --bam bamfile.bam  --scna_file /path/to/scna_file --data_repo path/to/data_repo `
+`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o /path/to/output_dir/sample  -t 8 --bam sample.bam  --scna_file sample.txt --data_repo path/to/data_repo `
 
 
 Below is a sample Slurm file:
@@ -45,7 +45,7 @@ module load singularity
 filename="sample_name"
 export MOSEKLM_LICENSE_FILE="/path/to/license"
 bam="/path/to/bam"
-amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/${filename} -t 4 --bam ${bam} --scna_file /path/to/scna/sample.txt --data_repo /data_repo
+amplicon_suite_ppcg/singularity/run_paa_singularity.py -o output/${filename} -t 4 --bam /path/to/bam/sample.bam --scna_file /path/to/scna/sample.txt --data_repo /data_repo
 ```
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
