@@ -4,10 +4,15 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
 
 ## Installation
 1. Obtain the data repository containing  the AmpliconSuite-pipeline image and GRCh37 annotations  :
-    * Download the data repo: [url for download]
+    * Download the data repo: /pptech_exchange/Working_Groups/ECDNA/data_repo.tar.gz.gpg
+    * Decrypt the data
+         ```bash
+         gpg file_to_decrypt.gpg
+         ```
     * Extract the tar file
-        ```bash
-        tar zxf data_repo.tar.gz
+         ```bash
+         tar zxf data_repo.tar.gz
+         ```
 2. Obtain the execution script
     ```bash
     git clone https://github.com/uretaj/amplicon_suite_ppcg.git
