@@ -3,18 +3,21 @@
 The original code and instructions are from https://github.com/AmpliconSuite/AmpliconSuite-pipeline . It has been modified to generate the seed intervals from the Battenberg calls, which are then passed to Amplicon Architect.
 
 ## Installation
-1.  Download the list of samples and filter by country: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/hlfa_list_all_countries.csv
-2.  Obtain the data repository containing  the AmpliconSuite-pipeline image and GRCh37 annotations  :
+1.  Download the list of samples and filter by country and remove the rows/samples that should not be included: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/hlfa_list_all_countries.csv
+      Column 1: Sample name (Local ID)  
+      Column 2: SCNA filename
+      Column 3: Country
+3.  Obtain the data repository containing  the AmpliconSuite-pipeline image and GRCh37 annotations  :
     * Download the data repo: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/data_repo.tar.gz
     * Extract the tar file
          ```bash
          tar zxf data_repo.tar.gz
          ```
-3. Obtain the execution script
+4. Obtain the execution script
     ```bash
     git clone https://github.com/uretaj/amplicon_suite_ppcg.git
     ```
-4. License for Mosek optimization tool:
+5. License for Mosek optimization tool:
     * Obtain license file `mosek.lic` (`https://www.mosek.com/products/academic-licenses/`). The license is free for academic use.
     * Place the file in `$HOME/mosek/` (i.e, the `mosek/` folder that now exists in your home directory).
     * If you are not able to place the license in the default location, you can set a custom location by exporting the bash variable   `MOSEKLM_LICENSE_FILE=/custom/path/`.
