@@ -3,7 +3,7 @@
 The original code and instructions are from https://github.com/AmpliconSuite/AmpliconSuite-pipeline . It has been modified to generate the seed intervals from the Battenberg calls, which are then passed to Amplicon Architect.
 
 ## Installation
-1.  Download the list of samples and filter by country and remove the rows/samples that should not be included: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/hlfa_list_all_countries.csv
+1.  Download the list of samples, filter by country and remove the rows/samples that should not be included: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/hlfa_list_all_countries.csv
       * Column 1: Sample name (Local ID)  
       * Column 2: SCNA filename
       * Column 3: Country
