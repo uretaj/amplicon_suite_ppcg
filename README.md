@@ -56,7 +56,7 @@ echo "SAMPLE ${sample}"
 echo "FILENAME ${cnv}"
 pathf="BAM/${sample}.mapped.bam"
 cnvpath="Subclonal_SCNA_with_Avg_CN/${cnv}
-amplicon_suite_ppcg/singularity/run_paa_singularity.py  -o AA_RESULT/${sample}  --bam ${pathf}  --scna_file ${cnvpath} --data_repo /home/data_repo
+amplicon_suite_ppcg/singularity/run_paa_singularity.py  -o AA_RESULT/${sample}  --bam ${pathf}  --scna_file ${cnvpath} --data_repo path/data_repo
 ```
 Here's an example of how to submit a job arrray to run multiple samples (i.e. execute the script for 40 samples but only run 5 samples at a time)
 
