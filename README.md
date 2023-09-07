@@ -24,7 +24,7 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
         ```
 An example command might look like:
 
-`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o path/to/output_dir/sample -t 1 --bam sample.bam  --scna_file sample.txt --data_repo path/to/data_repo `
+`amplicon_suite_ppcg/singularity/run_paa_singularity.py -o path/to/output_dir/sample  --bam sample.bam  --scna_file sample.txt --data_repo path/to/data_repo `
 
 
 Below is a sample Slurm file:
@@ -56,7 +56,7 @@ echo "SAMPLE ${sample}"
 echo "FILENAME ${cnv}"
 pathf="BAM/${sample}.mapped.bam"
 cnvpath="Subclonal_SCNA_with_Avg_CN/${cnv}
-amplicon_suite_ppcg/singularity/run_paa_singularity.py  -o AA_RESULT/${sample} -t 1  --bam ${pathf}  --scna_file ${cnvpath} --data_repo /home/data_repo
+amplicon_suite_ppcg/singularity/run_paa_singularity.py  -o AA_RESULT/${sample}  --bam ${pathf}  --scna_file ${cnvpath} --data_repo /home/data_repo
 ```
 Here's an example of how to submit a job arrray to run multiple samples (i.e. execute the script for 40 samples but only run 5 samples at a time)
 
@@ -66,7 +66,6 @@ sbatch --array=1-40%5 amplicon_suite.slurm
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
 - `-o  {outdir}`: Directory where results will be stored. Include the sample name to avoid conflicts.
-- `-t  {int}`: Number of threads to use for BWA and CNVkit.
 - `--data_repo {repodir} `:  Directory where the singularity image file and  required annotations for GRCh37 are stored.
 
 Input files:
