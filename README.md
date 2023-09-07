@@ -58,6 +58,11 @@ pathf="BAM/${sample}.mapped.bam"
 cnvpath="Subclonal_SCNA_with_Avg_CN/${cnv}
 amplicon_suite_ppcg/singularity/run_paa_singularity.py  -o AA_RESULT/${sample} -t 1  --bam ${pathf}  --scna_file ${cnvpath} --data_repo /home/data_repo
 ```
+Here's an example of how to submit a job arrray to run multiple samples (i.e. execute the script for 40 samples but only run 5 samples at a time)
+
+```bash
+sbatch --array=1-40%5 amplicon_suite.slurm
+```
 ## Command line arguments to AmpliconSuite-pipeline
 #### Required
 - `-o  {outdir}`: Directory where results will be stored. Include the sample name to avoid conflicts.
