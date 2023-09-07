@@ -4,9 +4,9 @@ The original code and instructions are from https://github.com/AmpliconSuite/Amp
 
 ## Installation
 1.  Download the list of samples and filter by country and remove the rows/samples that should not be included: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/hlfa_list_all_countries.csv
-      *Column 1: Sample name (Local ID)  
-      *Column 2: SCNA filename
-      *Column 3: Country
+      * Column 1: Sample name (Local ID)  
+      * Column 2: SCNA filename
+      * Column 3: Country
 3.  Obtain the data repository containing  the AmpliconSuite-pipeline image and GRCh37 annotations  :
     * Download the data repo: /pptech_exchange/Working_Groups/Mutational_Processes/ecDNA/data_repo.tar.gz
     * Extract the tar file
