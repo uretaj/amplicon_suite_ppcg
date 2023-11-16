@@ -123,7 +123,7 @@ group.add_argument("--completed_AA_runs", help="Path to a directory containing o
 """
 
 args = parser.parse_args()
-test_singularity_version()
+#test_singularity_version()
 """
 if args.sif and not args.sif.endswith("ampliconsuite-pipeline_latest.sif"):
     if not args.sif.endswith("/"): args.sif+="/"
