@@ -75,5 +75,5 @@ sbatch --array=1-40%5 amplicon_suite.slurm
 Input files:
 
   * `--bam {sample.bam}` Coordinate-sorted bam
-  * `--scna_file {scna.txt}` Supply the Battenberg SCNA calls of the sample to generate the seed intervals to be passed to Amplicon Architect
+  * `--scna_file {scna.txt}` Supply the Battenberg SCNA calls of the sample to generate the seed intervals to be passed to Amplicon Architect. Please use the May 2023 SCNA calls from: /data_releases/WGS_Data_Release/Somatic_variants/SCNA/SCNA_with_BD_SVs_03_05_2023.tar.gz.gpg
 
