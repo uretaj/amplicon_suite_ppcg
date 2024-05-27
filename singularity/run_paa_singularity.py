@@ -314,7 +314,7 @@ if args.no_QC:
 """
 #if args.AA_insert_sdevs: 
 argstring += " --cnv_bed /home/bed_dir/" + cnvname
-argstring += " --AA_insert_sdevs 3.0" # + str(args.AA_insert_sdevs)  #modification uretaj 
+#argstring += " --AA_insert_sdevs 3.0" # + str(args.AA_insert_sdevs)  #modification uretaj 
 
 # To use, would need to mount the directory of this file. Users should just modify as needed afterwards.
 # if args.sample_metadata:
