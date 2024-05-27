@@ -247,9 +247,9 @@ if args.scna_file:
 # assemble an argstring
 argstring = "-t 1 --cngain " + str(4.5) + " --cnsize_min " + \
     str(50000) + " --downsample -1" + " -s " + sample_name + \
-    " --AA_extendmode " + "EXPLORE" + " --AA_runmode " + "FULL" + \
-    " --AA_insert_sdevs 3.0"  
-"""    
+    " --AA_extendmode " + "EXPLORE" + " --AA_runmode " + "FULL"
+"""
++ \   " --AA_insert_sdevs 3.0"     
 argstring = "-t " + str(args.nthreads) + " --cngain " + str(args.cngain) + " --cnsize_min " + \
     str(args.cnsize_min) + " --downsample " + str(args.downsample) + " -s " + args.sample_name + \
     " --AA_extendmode " + args.AA_extendmode + " --AA_runmode " + args.AA_runmode + \
