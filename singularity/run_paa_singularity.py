@@ -247,8 +247,7 @@ if args.scna_file:
 # assemble an argstring
 argstring = "-t 1 --cngain " + str(4.5) + " --cnsize_min " + \
     str(50000) + " --downsample -1" + " -s " + sample_name + \
-    " --AA_extendmode " + "EXPLORE" + " --AA_runmode " + "FULL" + \
-    " --AA_insert_sdevs 3.0"  
+    " --AA_extendmode " + "EXPLORE" + " --AA_runmode " + "FULL"   
 """    
 argstring = "-t " + str(args.nthreads) + " --cngain " + str(args.cngain) + " --cnsize_min " + \
     str(args.cnsize_min) + " --downsample " + str(args.downsample) + " -s " + args.sample_name + \
@@ -314,7 +313,7 @@ if args.no_QC:
 """
 #if args.AA_insert_sdevs: 
 argstring += " --cnv_bed /home/bed_dir/" + cnvname
-argstring += " --AA_insert_sdevs 3.0" # + str(args.AA_insert_sdevs)  #modification uretaj 
+#argstring += " --AA_insert_sdevs 3.0" # + str(args.AA_insert_sdevs)  #modification uretaj 
 
 # To use, would need to mount the directory of this file. Users should just modify as needed afterwards.
 # if args.sample_metadata:
